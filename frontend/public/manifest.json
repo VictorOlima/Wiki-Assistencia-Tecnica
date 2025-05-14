@@ -1,0 +1,8 @@
+{
+  "short_name": "Wiki Técnica",
+  "name": "Wiki de Problemas Técnicos para Assistência Eletrônica",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+} 

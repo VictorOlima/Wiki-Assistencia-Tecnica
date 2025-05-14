@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.sidebar {
+  min-height: 100vh;
+  transition: all 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  background-color: #343a40;
+}
+
+.sidebar.collapsed {
+  width: 60px !important;
+}
+
+.sidebar-header {
+  padding: 20px;
+  background-color: #212529;
+}
+
+.content {
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.content-collapsed {
+  margin-left: 60px;
+}
+
+.tag-badge {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.problem-card {
+  margin-bottom: 15px;
+  transition: transform 0.2s;
+}
+
+.problem-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.file-thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.pdf-icon {
+  font-size: 5rem;
+  color: #dc3545;
+}
+
+.file-icon {
+  font-size: 5rem;
+  color: #0d6efd;
+}
+
+.file-preview {
+  transition: transform 0.2s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.file-preview:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.file-preview .card-header {
+  background-color: #f8f9fa;
+  padding: 0.5rem;
+  font-weight: 500;
+}
+
+.file-preview .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.file-preview img.img-fluid {
+  max-height: 150px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.toggle-sidebar-btn {
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.sidebar-link {
+  color: #f8f9fa;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.sidebar-link:hover {
+  background-color: #495057;
+  color: #fff;
+}
+
+.sidebar-link.active {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.sidebar-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.sidebar.collapsed .sidebar-text {
+  display: none;
+}
+
+.sidebar-footer {
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-logout {
+  color: #f8f9fa;
+  transition: all 0.3s;
+  padding: 5px 0;
+}
+
+.sidebar-logout:hover {
+  color: #dc3545;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+/* Estilo para o modal de visualização de imagens */
+.modal-body img {
+  max-width: 100%;
+  max-height: 80vh;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Animação para carregamento de imagens */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.img-fluid {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    height: 100%;
+  }
+  
+  .sidebar.collapsed {
+    width: 50px !important;
+  }
+  
+  .content-collapsed {
+    margin-left: 50px;
+    width: calc(100% - 50px);
+  }
+  
+  .sidebar-header {
+    padding: 15px 10px;
+  }
+  
+  .toggle-sidebar-btn {
+    padding: 5px;
+  }
+  
+  .sidebar-link {
+    padding: 15px 10px;
+    justify-content: center;
+  }
+  
+  .sidebar-icon {
+    margin-right: 0;
+    font-size: 1.4rem;
+  }
+} 
